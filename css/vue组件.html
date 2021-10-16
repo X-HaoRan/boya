@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<jubu :msgs='msg' @cc='bb'></jubu>
+	</div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+	const  jubu={
+		template:`<div> <h1  @click="tap" >{{msgs}}</h1> </div>`,
+		data(){
+		return {
+			msges:'我是子组件传递过来的数据'
+		}
+		},
+		props:['msgs'],
+		methods:{
+		tap(){
+		console.log(this.msgs)
+		this.$emit('cc',this.msges)
+	}
+		}
+		};
+	const  xhr=new Vue({
+		el:'#app',
+		data:{
+			msg:'dsdsadasd'
+		},
+		methods:{
+			bb(count){
+				alert('我是父组件')
+				this.msg=count
+			}
+		},
+		components:{
+			jubu,
+		}
+	})
+</script>

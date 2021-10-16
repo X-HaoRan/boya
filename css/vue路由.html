@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<h1>{{msg}}</h1>
+		<router-link :to="{name:'Login' , query:{name:'xuhaoran',age:20}}">用户登录</router-link>
+		<router-link :to="{name:'Register'}">用户注册</router-link>
+		<button @click='tao'>点我进入用户注册</button>
+		<router-view/>
+	</div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="vue-router.js"></script>
+<script>
+	const login={
+		template:` <div><h4>用户登录</h4></div> `,
+		created(){
+			console.log(this.$route.query.name);
+			console.log(this)
+		}
+	};
+	const register={
+		template:`<div><h4>用户注册</h4></div>`
+	};
+
+	const router=new VueRouter({
+		routes:[
+			{path:'/login',component:login,name:'Login'},
+			{path:'/register',component:register,name:'Register'},
+		]
+	});
+
+	const app=new Vue({
+		el:'#app',
+		data:{
+			msg:"vue路由的基本使用"
+		},
+		methods：{
+			tao(){
+				console.log(this.$route.name);
+				if(this.$route.name!='Register'){
+				this.$router.push('/register')}
+			}
+		},
+		router,
+		
+	})
+</script>

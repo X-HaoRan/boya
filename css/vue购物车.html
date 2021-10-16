@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		编号：<input type="text" v-model="obj.id">
+		名称：<input type="text" v-model="obj.name">
+		价格：<input type="text" v-model="obj.price">
+		数量：<input type="text" v-model="obj.count">
+		<input type="button" value="添加到购物车" @click="add">
+		<br>
+		<br>
+		<br>
+	<table border="1" width="600">
+		<tr>
+			<th>编号</th>
+			<th>名称</th>
+			<th>价格</th>
+			<th>购买数量</th>
+			<th>小计</th>
+		</tr>
+		<tr v-for="(item,index) in lisobj" :key="index">
+			<th>{{item.id}}</th>
+			<th>{{item.name}}</th>
+			<th>{{item.price}}</th>
+			<th> <input type="button" value="-" @click="delite(index)"> <span>{{item.count}}</span> <input type="button" value="+" @click="top11(index)"></th>
+			<th>{{(item.price*item.count).toFixed(2)}}</th>
+		</tr>
+	</table>
+	<h1>总记{{totalprice}}元</h1>
+</div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+	var xhr=new Vue({
+		el:'#app',
+		data:{
+		obj:{},
+		lisobj:[{id:1,name:'苹果8',price:5200.8,count:1,},{id:1,name:'苹果8',price:5200,count:1,},{id:1,name:'苹果8',price:5200.6,count:1,},{id:1,name:'苹果8',price:5200.6,count:1,},]
+		},
+		methods:{
+			delite(idx){
+				if(this.lisobj[idx].count==0){
+					alert('不能再减了')
+				}else{
+				this.lisobj[idx].count--}
+			},			
+			top11(idx){
+				this.lisobj[idx].count++
+			},
+			
+			add(){
+				if(!this.obj.id || !this.obj.name || !this.obj.price || !this.obj.count)
+					{alert('请检查是否输入正确')}else{
+				this.lisobj.push(this.obj)};
+				this.obj={}
+			}
+		},
+		computed:{
+			totalprice(){
+				var ace=0;
+				for(var i=0;i<this.lisobj.length;i++){
+					ace += this.lisobj[i].price*this.lisobj[i].count;
+					console.log(ace)
+				}
+				return ace.toFixed(2);
+			}
+		}
+
+	})
+</script>

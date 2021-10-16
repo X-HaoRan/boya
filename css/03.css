@@ -1,0 +1,286 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.cl{
+	clear:both;
+}
+.banxing{
+	margin: 0 auto;
+	width: 1170px;
+}
+.cl{
+	clear:both;
+}
+ul,ol{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #333;
+ }
+/*头部*/
+.aa{
+	width: 100%;
+	height: 106px;
+ }
+ .aa .bb{
+	width: 1170px;
+	height: 106px;
+	border-bottom: 1px solid #333333;
+	position: relative;
+ }
+.aa .bb .cc{
+	width: 1170px;
+	height: 35px;
+	position: absolute;
+	top:50%;
+	margin-top: -17.5px;
+ }
+.aa .bb .cc .dd {
+	width: 360px;
+	height: 18.72px;
+	float:left;
+ }
+.aa .bb .cc .dd .ee img{
+	height: 12px;
+	float: left;
+}
+.aa .bb .cc .dd .ee{
+	padding: 0 15px;
+	font-size: 12px;
+    color: #333;
+    line-height: 12px;
+ }
+.aa .bb .cc .ff{
+	font-size: 35px;
+	width:140px ;
+	height: 46px;
+	position: absolute;
+	bottom: 0;
+	left:50%;
+	margin-left: -23px;
+ }
+.gg{
+	padding: 0 15px;
+	line-height: 35px;
+ }
+ .gg  li img{
+	height: 20px;
+	float:left;
+ }
+.gg  li{
+	float:right;
+	margin-left: 30px;
+	font-size: 14px;
+	line-height: 20px;
+ }
+/*动态1*/
+.as{
+	background: white;
+	width: 300px;
+	height: 355px;
+	border: 1px solid black;
+	position: absolute;
+	right:0;
+	top:60px;
+	display:none;
+	 z-index:+1;
+ }
+.as ul{
+	padding: 15px;
+	overflow: hidden;
+ }
+ .as li{
+ 	height: 115px;
+ 	border-bottom: 1px solid black;
+ 	margin-bottom: 15px;
+}
+ .as li img{
+ 	position: absolute;
+ }
+ .as li p{
+ 	margin-left: 90px;
+ 	line-height: 30px;
+ }
+ .as span{
+ 	float:right;
+ 	width: 	15px;
+ 	height: 15px;
+ 	border: 1px solid black;
+ 	line-height: 12px;
+ 	text-align: center;	
+ 	margin:15px 15px 0 0;
+ }
+ .as .rig{
+ 	float:left;
+ }
+ .as .left{
+ 	float:right;
+ }
+ .as .anniu1 a{
+ 	display: block;
+ 	width: 132px;
+ 	height: 37px;
+ 	background: black;
+ 	color:white;
+ 	line-height: 37px;
+ 	text-align: center;
+ 	float:left;
+ 	border:1px solid black;
+ 	margin-left:10px;
+ }
+ .as .anniu2 a{
+ 	display: block;
+ 	width: 132px;
+ 	height: 37px;
+ 	border:1px solid black;
+ 	color:black;
+ 	line-height: 37px;
+ 	text-align: center;
+ 	margin-right: 10px;
+ 	float:right;
+ }
+ .as .anniu2 a:hover{
+ 	color:white;
+ 	background: black;
+ }
+ /*动态1结束*/
+ /*动态2*/
+ .ds{
+	background: white;
+	width: 233px;
+	height: 66px;
+	border: 1px solid black;
+	position: absolute;
+	right:0;
+	top:60px;
+	display: none;
+ }
+ /*动态2结束*/
+ /*en按钮*/
+ .ws{
+	background: white;
+	width: 21px;
+	height: 92px;
+	border: 1px solid black;
+	position: absolute;
+	right:13px;
+	top:25px;
+	display: none;
+ }
+ .ws li{
+ 	height: 23px;
+ }
+ .ws li.now{
+ 	background: skyblue;
+ }
+ .mn{
+ 	height: 90px;
+ 	position: relative;
+ }
+ .mn ul{
+ 	position: absolute;
+ 	left:50%;
+ 	margin-left:-220px;
+ }
+ .mn li{
+ 	float:left;
+ 	line-height: 90px;
+ 	font-size: 14px;
+ 	margin-right: 35px;
+ }
+ /*en按钮结束*/
+ /*主图*/
+ .zhutu{
+ 	width: 100%;
+ 	height: 622px;
+ 	position: relative;
+ 	overflow: hidden;
+ 	top:0;
+ }
+  .zhutu ul{
+  	position: absolute;
+   left:0px;
+  	top:0;
+    width: 9100%;
+  }
+  .zhutu ul li{
+  	float:left;
+  }
+ .zhutu ul li img{
+ 	width: 100%;
+ 	height: 100%;
+ }
+ /*.zhutu{
+ 	width: 100%;
+ 	height: 622px;
+/* 	overflow: hidden;*/
+/* 	position: relative;
+ 	top:0;
+ 	left:0;
+ }
+ .zhutu .mbn li{
+ 	float:left;
+ 	position: absolute;
+ 	top: 0;
+ 	left:0;
+ }
+ .mbn img{
+  	width: 100%;
+  	height: 622px;
+ }*/
+ /*主图*/
+ /*箭头*/
+ .jiantou{
+ 	width: 100%;
+ 	position: absolute;
+ 	top:50%;
+ 	margin-top: -25px;
+ }
+ .zhutu .you img{
+ float:right;
+ }
+ .obj{
+ 	margin-top:125px;
+ 	text-align: center;
+ 	margin-bottom: 45px;
+ }
+ .diyi{
+ 	width: 585px;
+ 	float:left;
+ 	position: relative;
+ }
+ .diyi .didi{
+ 	height: 350px;
+ 	overflow: hidden;
+ 	margin-bottom: 30px;
+ }
+  .diyi .yiyi{
+ 	height: 350px;
+ 	overflow: hidden;
+ }
+ .erer{
+ 	float:right;
+ 	height: 730px;
+ 	overflow: hidden;
+ 	position: relative;
+ }
+ .didi .wenzi{
+ 	margin: 20px 0 0 20px;
+ 	position: absolute;
+ 	top:0;
+ 	left:0;
+ }
+  .yiyi .wenzi2{
+ 	margin: 20px 0 0 20px;
+ 	position: absolute;
+ 	top:380;
+ 	left:0;
+ }
+  .erer .wenzi3{
+ 	margin: 20px 0 0 20px;
+ 	position: absolute;
+ 	top:380;
+ 	left:0;
+ }

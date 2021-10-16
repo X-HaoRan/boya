@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="xml">
+	<label for="non">请输入内容:</label>
+	<input type="text" id="non" v-model="content">
+	<button  @click="newbb"> 添加到备忘录</button>
+	<ul v-if="lists.length!=0">
+		<li v-for="(item,index) in lists" :key="index">{{index+1}}.{{item}}<a href="javascript:;" @click="delet(index)">删除</a> </li>	
+		<a href="javascript:;" @click="deletall">清空当前备忘录</a>
+	<h1>当前备忘录共{{lists.length}}条</h1>
+	</ul>
+	<ul v-if="lists.length==0">
+		<li>当前没有数据</li>
+	</ul>
+</div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+	var xhr=new Vue({
+		el:'#xml',
+		data:{
+			lists:['今天去打球','今天去游泳','今天去爬山'],
+			content:"",
+		},
+		methods:{
+		newbb(){
+			console.log(this.content);
+			if(!this.content){
+				alert('请输入内容');
+			}else{
+			this.lists.push(this.content);
+			this.content="";
+			}
+		},
+		delet(index){
+			this.lists.splice(index,1);
+		},
+		deletall(){
+			this.lists=[];
+		}
+		}
+	})
+</script>

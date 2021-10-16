@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>博雅</title>
+	<link rel="stylesheet" href="css/01.css">
+	<script src="css/index.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="juzhong header-c">
+		<h1><a href=""><img src="img/d9cebdcbb7dbeaabdeb27000ee2cf12.png" alt=""></a></h1>
+			<ul class="nows">
+				<li class="now"><a href="">首页</a></li>
+				<li ><a href="#">博雅游戏</a></li>
+				<li ><a href="#">博雅新闻</a></li>
+				<li ><a href="#">关于我们</a></li>
+				<li ><a href="#">客服中心</a></li>
+				<li ><a href="#">投资者建议</a></li>
+			</ul>
+			<div class="come"><a href="#">加入我们</a></div>
+			<span class="now"><a href="#">中文</a></span><span><a href="#">EN</a></span>
+		</div>
+	</div>
+<script>
+	var now=document.querySelector('.nows').querySelectorAll('li');
+	var span=document.querySelector('.header-c').querySelectorAll('span');
+	for(i=0;i<now.length;i++){
+		now[i].addEventListener('click',function(){
+
+			for(i=0;i<now.length;i++){
+				now[i].className='';
+			}
+			this.className='now';
+		})
+	};
+	for(p=0;p<span.length;p++){
+		span[p].addEventListener('click',function(){
+			for(i=0;i<span.length;i++){
+				span[i].className='';
+			}
+			this.className='now';
+		})
+	};
+	for(r=0;r<span.length;r++){
+	span[1].addEventListener('click',function(){
+		location.assign('http://www.boyaa.com/en/index.html');
+	})}
+</script>
+	<div class="cl"></div>
+<div class="zhutu">
+	<ul class='cg'>
+		<li class="zhutu1"><a href=""><img src="img/probanner4.jpg" alt=""></a></li>
+		<li ><a href=""><img src="img/banner20210325.jpg" alt=""></a></li>
+		<li ><a href=""><img src="img/banner20201126.jpg" alt=""></a></li>
+	</ul>
+	<ol class="vv">
+		<li class="now"></li>
+		<li ></li>
+		<li ></li>
+	</ol>
+</div>
+<script>
+	var li=document.querySelector('.vv').querySelectorAll('li');
+	var li2=document.querySelector('.cg').querySelectorAll('li');
+	var x=0;
+	var y=x-1;
+	dowmn();
+	setInterval(dowmn,5000);
+	function dowmn(){
+	for(k=0;k<li.length;k++){		
+	li[k].className='';
+	li2[k].className='';
+		}if(x==0){
+	li[x].className='now';
+	li2[x].className='zhutu1';
+	x++;
+}else if(x==1){
+	li[0].className='';
+	li2[0].className='';
+	li[x].className='now';	
+	li2[x].className='zhutu1';
+	x++;
+}else if(x==2){
+	li[1].className='';
+	li2[1].className='';
+	li[x].className='now';	
+	li2[x].className='zhutu1';
+	x=0;
+}
+}
+	for(i=0;i<li.length;i++){
+	li[i].setAttribute('index',i);
+
+	li[i].addEventListener('click',fn)
+	function fn(){
+		for(i=0;i<li.length;i++){   
+			li[i].className='';
+			li2[i].className='';
+		}
+		this.className='now';
+		var cc=this.getAttribute('index');
+		li2[cc].className='zhutu1';
+	}
+};
+</script>
+
+	<div class="cl"></div>
+<div class="youxi juzhong">
+	<ul class='index'>
+		<li><a href="#"><img src="img/d7e4ee1a1f2afa50743b2f441081ddc.png" alt="">
+			<h3>中国象棋</h3>
+			<p>CCOB</p>
+		</a>
+		</li>
+		<li><a href=""><img src="img/3c558dab48249e7daf2180d6a9e6b6c.png" alt="">			
+			<h3>四川棋牌</h3>
+			<p>BSG</p>
+		</a>
+		</li>
+		<li><a href=""><img src="img/1f6ec772b89271707f106e9bdb3f9cf.png" alt="">
+			<h3>博雅棋牌</h3>
+			<p>BC</p>
+		</a>
+		</li>
+		<li class="mr0"><a href="#"><img src="img/a453043bc12541ea55be69f3e9f3aea.png" alt="">			
+			<h3>四川麻将</h3>
+			<p>SM</p>
+		</a>
+		</li>
+		<li><a href="#"><img src="img/byamaj.jpg" alt="">
+			<h3>中国象棋</h3>
+			<p>CCOB</p>
+		</a>
+		</li>
+		<li><a href=""><img src="img/bygy.jpg" alt="">			
+			<h3>四川棋牌</h3>
+			<p>BSG</p>
+		</a>
+		</li>
+		<li><a href=""><img src="img/cdmjcf.png" alt="">
+			<h3>博雅棋牌</h3>
+			<p>BC</p>
+		</a>
+		</li>
+		<li class="mr0"><a href="#"><img src="img/cdmjgyshg.png" alt="">			
+			<h3>四川麻将</h3>
+			<p>SM</p>
+		</a>
+		</li>
+		<li><a href="#"><img src="img/ddz_gys.jpg" alt="">
+			<h3>中国象棋</h3>
+			<p>CCOB</p>
+		</a>
+		</li>
+		<li><a href=""><img src="img/laxxzxx.png" alt="">			
+			<h3>四川棋牌</h3>
+			<p>BSG</p>
+		</a>
+		</li>
+		<li><a href=""><img src="img/yngxs.png" alt="">
+			<h3>博雅棋牌</h3>
+			<p>BC</p>
+		</a>
+		</li>
+		<li class="mr0"><a href="#"><img src="img/xq_gys.jpg" alt="">			
+			<h3>四川麻将</h3>
+			<p>SM</p>
+		</a>
+		</li>
+	</ul>
+	<ol class='ol'>
+		<li class="now"></li>
+		<li ></li>
+		<li></li>
+	</ol>
+</div>
+<div class="cl"></div>
+<!-- 新闻招聘 -->
+<div class="boyazhaopin juzhong">
+	<div class="box1">
+		<div class="top"><a href="#">MORE <sup>+</sup></a></div>
+		<ul>
+			<li><a href="http://www.boyaa.com/page/news/newsinfo105.html">博雅互动2020年度业绩</a><span>3/25</span></li>
+			<li><a href="http://www.boyaa.com/page/news/newsinfo104.html">喜讯|博雅互动荣获2020鲸鸣奖“十佳出海品牌”</a><span>3/25</span></li>
+			<li><a href="http://www.boyaa.com/page/news/newsinfo103.html">博雅互动2020年第三季度业绩</a><span>3/25</span></li>
+			<li><a href="http://www.boyaa.com/page/news/newsinfo102.html">博雅互动2020年中期业绩</a><span>3/25</span></li>
+		</ul>
+	</div>
+	<div class="box2">
+		<DIV class="h1">
+		<h1>社会招聘</h1>
+		<p>BOYAA JOBS</p>
+		</DIV>
+		<div class="top"><a href="#">MORE <sup>+</sup></a></div>
+		<div class="sbox">
+			<p>社会招聘岗位：</p>
+			<ul>
+				<li><a href="http://www.boyaa.com/join_social.html">PHP开发工程师</a></li>
+				<li><a href="http://www.boyaa.com/join_social.html">C++开发工程师</a></li>
+				<li><a href="http://www.boyaa.com/join_social.html">LUA开发工程师</a></li>
+				<li><a href="http://www.boyaa.com/join_social.html">大数据开发工程师</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="cl"></div>
+<!-- 底部 -->
+<div class="footer">
+	<ul class="juzhong">
+		<li><a href="">网站地图</a><span>|</span></li>
+		<li><a href="">免责声明</a><span>|</span></li>
+		<li><a href="">监督举报</a></li>
+	</ul>
+<div class="bbb juzhong">
+	<p>Copyright © 2004 - 2019 博雅互动(Boyaa Interactive)粤ICP备05062536号</p>
+	<p>网络文化经营许可证：粤网文[2015]1991-405号 | 互联网出版许可证：新出网证（粤）字062号 | 增值电信业务经营许可证：粤 <a href=""><img src="img/govIcon.gif" alt=""></a></p>
+</div>
+</div>
+</body>
+</html>
